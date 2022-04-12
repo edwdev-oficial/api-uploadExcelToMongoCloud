@@ -2,15 +2,16 @@ const XLSX = require('xlsx');
 
 const Planilha = {
 
-    getPlanilha(data){
+    getPlanilha(file, sheet){
+
         try{
 
-            workbook = XLSX.read(data, {
+            workbook = XLSX.read(file, {
                 type: 'binary'
             });
 
-            var sheetNames = workbook.sheetNames;
-            var indexSheet = sheetNames.indexOf(namePlanilha);
+            var sheetNames = workbook.SheetNames;
+            var indexSheet = sheetNames.indexOf(sheet);
             var xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetNames[indexSheet]]);
             return xlData; 
 

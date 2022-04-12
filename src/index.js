@@ -7,14 +7,17 @@ app.use(express.json({ limit: '20mb', extended: true }));
 
 const port = 3333;
 
+const Planilha = require('./data/index.js');
 
-app.get('/', async(req, res) => {
-    const msg = { msg: 'Tudo Ok!!!' }
-    res.status(200).json(msg)
+
+app.post('/', async(req, res) => {
+
+    const { file, sheet } = req.body
+
+    const dataSheet = await Planilha.getPlanilha(file, sheet)
+
+    return res.status(200).json(dataSheet)
 
 });
-
-
-
 
 app.listen(port, () => console.log(`app up in http://localhost:${port}`));
