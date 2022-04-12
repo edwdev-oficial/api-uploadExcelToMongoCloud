@@ -1,0 +1,25 @@
+{
+  "name": "api-uploadexceltomongocloud",
+  "version": "1.0.0",
+  "description": "Receive workbook from front end and send them to mongo cloud database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdOliveiraJ/api-uploadExcelToMongoCloud.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "express",
+    "mongoose"
+  ],
+  "author": "Eduardo Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdOliveiraJ/api-uploadExcelToMongoCloud/issues"
+  },
+  "homepage": "https://github.com/EdOliveiraJ/api-uploadExcelToMongoCloud#readme"
+}
